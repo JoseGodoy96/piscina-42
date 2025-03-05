@@ -1,58 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unlucky <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/03 17:54:56 by unlucky           #+#    #+#             */
-/*   Updated: 2025/03/05 09:58:10 by unlucky          ###   ########.fr       */
+/*   Created: 2025/03/05 11:56:44 by unlucky           #+#    #+#             */
+/*   Updated: 2025/03/05 12:53:54 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-/*
- * Este ejercicio tampoco lo habia 
- * hecho en la piscina asi que no se
- * si esta correctamente.
- */
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void	ft_conver_hex(char c)
-{
-	char	*hex;
-
-	hex = "0123456789abcdef";
-	ft_putchar('\\');
-	ft_putchar(hex[c / 16]);
-	ft_putchar(hex[c % 16]);
-}
-
-void	ft_putstr_non_printable(char *str)
+void	ft_putnbr_base(int nbr, char *base)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (base[i] != '\0')
 	{
-		if ((str[i] >= 0 && str[i] <= 31) || str[i] == 127)
-			ft_conver_hex(str[i]);
-		else
-			ft_putchar(str[i]);
 		i++;
 	}
+	if (i == 16)
+	{
+		if (nbr >= 16)
+			ft_putnbr_base(nbr / 16, base);
+		ft_putchar(base[nbr % 16]);
+	}
+	if (i == 10)
+	{
+		if (nbr >= 10)
+			ft_putnbr_base(nbr / 10, base);
+		ft_putchar(nbr % 10 + '0');
+	}
+
+
 }
 
 int	main(void)
 {
-	char	str[30] = "Co\tucou\ntu vas bi\xen ?";
+	int	nbr = 98726;
+	char	*base = "0123456789";
 
-	ft_putstr_non_printable(str);
-	write(1, str, 30);
+	ft_putnbr_base(nbr, base);
 	return (0);
 }
