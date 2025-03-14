@@ -6,13 +6,13 @@
 /*   By: unlucky <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 16:31:31 by unlucky           #+#    #+#             */
-/*   Updated: 2025/03/14 17:17:49 by unlucky          ###   ########.fr       */
+/*   Updated: 2025/03/14 18:01:54 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 # define FT_ABS_H
 
-# define ABS(Value) ((Value) < 0) * -(Value) + (Value)
+# define ABS(Value) (Value < 0) * -(Value) (value >= 0) * (value)
 
 #endif
