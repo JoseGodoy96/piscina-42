@@ -6,7 +6,7 @@
 /*   By: unlucky <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 13:50:01 by unlucky           #+#    #+#             */
-/*   Updated: 2025/02/26 13:57:16 by unlucky          ###   ########.fr       */
+/*   Updated: 2025/03/18 12:46:57 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	correccion(int n)
 
 int	main(void)
 {
-	int num = 0;
-	int *nbr = &num;
+	int	num = 0;
+
 	ft_ft(&num);
 	correccion(num);
 	return (0);

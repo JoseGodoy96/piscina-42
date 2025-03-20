@@ -6,7 +6,7 @@
 /*   By: unlucky <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 15:43:05 by unlucky           #+#    #+#             */
-/*   Updated: 2025/03/05 18:24:49 by unlucky          ###   ########.fr       */
+/*   Updated: 2025/03/18 18:56:27 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_putnbr(int nb)
 int	main(void)
 {
 	int	nb = 3;
-	int	power = 2;
+	int	power = 3;
 
 	ft_recursive_power(nb, power);
 	ft_putnbr(ft_recursive_power(nb, power));

@@ -6,7 +6,7 @@
 /*   By: unlucky <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 12:36:38 by unlucky           #+#    #+#             */
-/*   Updated: 2025/03/07 19:17:57 by unlucky          ###   ########.fr       */
+/*   Updated: 2025/03/19 16:53:34 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strdup(char *src)
 		i++;
 	dest = malloc(sizeof(char) * (i + 1));
 	if (dest == NULL)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (src[i] != '\0')
 	{

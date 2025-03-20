@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unlucky <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/26 19:39:15 by unlucky           #+#    #+#             */
-/*   Updated: 2025/03/18 16:33:58 by unlucky          ###   ########.fr       */
+/*   Created: 2025/03/19 20:28:24 by unlucky           #+#    #+#             */
+/*   Updated: 2025/03/20 13:48:50 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdlib.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+void	ft_foreach(int *tab, int length, void(*f)(int))
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && i < n)
+	while (i < length)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		(*f)(tab[i]);
+		write(1, " ", 1);
 		i++;
 	}
-	if (i < n)
-		return (s1[i] - s2[i]);
-	return (0);
 }
 
 void	ft_putnbr(int n)
 {
-	char    c;
+	char	c;
 
 	if (n < 0)
 	{
 		write(1, "-", 1);
 		n = -n;
-	}	
+	}
 	if (n >= 10)
 		ft_putnbr(n / 10);
 	c = (n % 10) + '0';
@@ -45,12 +43,9 @@ void	ft_putnbr(int n)
 
 int	main(void)
 {
-	char s1[] = "abc";
-	char s2[] = "abd";
-	unsigned int n = 3;
-	
-	
-	ft_putnbr(ft_strncmp(s1, s2, n));
+	int	*tab = {1, 2, 3, 4, 5};
+	int	length = 5;
+
+	ft_foreach(tab, length, &ft_putnbr);
 	return (0);
 }
-

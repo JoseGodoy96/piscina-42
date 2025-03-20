@@ -6,7 +6,7 @@
 /*   By: jgodoy-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 19:03:26 by jgodoy-m          #+#    #+#             */
-/*   Updated: 2025/03/03 13:21:29 by unlucky          ###   ########.fr       */
+/*   Updated: 2025/03/18 14:09:57 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,23 +28,11 @@ char	*ft_strlowcase(char *str)
 	return (str);
 }
 
-void	correccion(char *crc)
-{
-	int	i;
-
-	i = 0;
-	while (crc[i] != '\0')
-	{
-		write(1, &crc[i], 1);
-		i++;
-	}
-}
-
 int	main(void)
 {
 	char	str[] = "HOLA";
 
 	ft_strlowcase(str);
-	correccion(str);
+	write(1, str, 5);
 	return (0);
 }

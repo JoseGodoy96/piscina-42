@@ -6,7 +6,7 @@
 /*   By: unlucky <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 16:30:14 by unlucky           #+#    #+#             */
-/*   Updated: 2025/02/26 16:33:23 by unlucky          ###   ########.fr       */
+/*   Updated: 2025/03/17 20:44:36 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ void	ft_putstr(char *str)
 
 int	main(void)
 {
-	char	str[4] = "hola";
+	char	*str = "hola";
+	str = "adios";
 
 	ft_putstr(str);
 	return (0);

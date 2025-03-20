@@ -6,7 +6,7 @@
 /*   By: unlucky <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 19:30:08 by unlucky           #+#    #+#             */
-/*   Updated: 2025/02/26 19:37:35 by unlucky          ###   ########.fr       */
+/*   Updated: 2025/03/18 16:23:39 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,8 @@ void	ft_putnbr(int n)
 int	main(void)
 {
 	char	s1[4] = "hola";
-	char	s2[4] = "hola";
+	char	s2[4] = "holb";
 
-	ft_strcmp(s1, s2);
 	ft_putnbr(ft_strcmp(s1, s2));
 	return (0);
 }

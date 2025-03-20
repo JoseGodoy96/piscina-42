@@ -6,7 +6,7 @@
 /*   By: unlucky <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 01:46:11 by unlucky           #+#    #+#             */
-/*   Updated: 2025/03/03 12:45:30 by unlucky          ###   ########.fr       */
+/*   Updated: 2025/03/18 12:42:03 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
+	i = 0;
 	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
@@ -27,8 +28,8 @@ char	*ft_strcpy(char *dest, char *src)
 
 int	main(void)
 {
-	char	src[5] = "hola";
-	char	dest[5] = "";
+	char	*src = "hola";
+	char	*dest;
 
 	ft_strcpy(dest, src);
 	write(1, dest, 5);

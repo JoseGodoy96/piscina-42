@@ -6,7 +6,7 @@
 /*   By: unlucky <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 18:26:07 by unlucky           #+#    #+#             */
-/*   Updated: 2025/03/05 18:58:11 by unlucky          ###   ########.fr       */
+/*   Updated: 2025/03/18 19:03:35 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	ft_fibonacci(int index)
 {
 	if (index < 0)
 		return (-1);
-	if (index <= 1)
-		return (index);
-	else
+	else if (index == 0)
+		return (0);
+	else if (index > 1)
 		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
 
@@ -39,7 +39,7 @@ void	ft_putnbr(int index)
 
 int	main(void)
 {
-	int	index = 5;
+	int	index = 10;
 
 	ft_fibonacci(index);
 	ft_putnbr(ft_fibonacci(index));

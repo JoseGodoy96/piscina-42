@@ -6,7 +6,7 @@
 /*   By: unlucky <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 16:34:43 by unlucky           #+#    #+#             */
-/*   Updated: 2025/02/26 17:09:19 by unlucky          ###   ########.fr       */
+/*   Updated: 2025/03/17 18:23:57 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int	main(void)
 {
 	char	str[4] = "hola";
 
-	ft_strlen(str);
 	ft_putnbr(ft_strlen(str));
 	return (0);
 }

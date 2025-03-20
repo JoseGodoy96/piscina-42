@@ -6,7 +6,7 @@
 /*   By: unlucky <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 12:56:24 by unlucky           #+#    #+#             */
-/*   Updated: 2025/03/03 13:06:53 by unlucky          ###   ########.fr       */
+/*   Updated: 2025/03/18 13:28:35 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_str_is_alpha(char *str)
 	return (1);
 }
 
-int	ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
 	char	c;
 

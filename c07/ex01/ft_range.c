@@ -6,7 +6,7 @@
 /*   By: unlucky <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 19:19:25 by unlucky           #+#    #+#             */
-/*   Updated: 2025/03/07 19:43:24 by unlucky          ###   ########.fr       */
+/*   Updated: 2025/03/19 17:08:21 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	main(void)
 	int	*result;
 
 	min = 5;
-	max = 10;
+	max = 15;
 	result = ft_range(min, max);
 	ft_print_range(result, max - min);
 	free(result);
