@@ -6,7 +6,7 @@
 /*   By: unlucky <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 20:36:07 by unlucky           #+#    #+#             */
-/*   Updated: 2025/02/26 19:12:16 by unlucky          ###   ########.fr       */
+/*   Updated: 2025/03/20 19:34:36 by unlucky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,41 +20,20 @@
  * de plantearlo pero lo volvere a intentar en el futuro.
  */ 
 
-void	printme(int n, int i, int j, int k)
-{
-	if (n == 2)
-	{
-		write(1, &i, 1);
-		write(1, &j, 1);
-	}
-	else if (n == 3)
-	{
-		write(1, &i, 1);
-		write(1, &j, 1);
-		write(1, &k, 1);
-	}
-		
-}
-
 void	ft_print_combn(int n)
 {
-	int	i;
-	int	j;
-	int	k;
+	char	i;
+	char	j;
 
 	i = '0';
-	while (i <= '7')
+	while (i <= '8')
 	{
-		i = j + 1;
-		while (j <= '8')
+		j = i + 1;
+		while (j <= '9')
 		{
-			k = j + 1;
-			while (k <= '9')
-			{
-				printme(n, i, j, k);
-				write(1, " ", 1);
-				k++;
-			}
+			write(1, &i, 1);
+			write(1, &j, 1);
+			write(1, " ", 1);
 			j++;
 		}
 		i++;
